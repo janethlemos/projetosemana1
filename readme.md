@@ -6,3 +6,4 @@ O imposto de renda a ser descontado é equivalente a 10% do salário bruto.
 Ao final, ver na tela o valor do salário líquido.
 
 Ver~soa: 05 - Operadores
+teste
