@@ -7,6 +7,11 @@ for (var i = 1; i <= 5; i++) {
   var salario_bruto = parseFloat(prompt('Digite seu salário bruto:'));
   var dependentes = parseInt(prompt("Digite o numero de dependentes:"));
 
+  for (var j = 1; j <= dependentes; j++) {
+    var ganho = parseFloat(prompt('Digite seu ganho mensal:'));
+    salario_bruto = salario_bruto + ganho;
+
+  }
   var renda_percapta = salario_bruto / (dependentes + 1);
 
   if (renda_percapta >= 500) {
@@ -21,7 +26,7 @@ for (var i = 1; i <= 5; i++) {
   } else {
     var ir = 0;
   }
-
+  console.log("O salario bruto da familia e:", salario_bruto + ganho);
   var salario_liquido = salario_bruto - ir;
   console.log("Sálário líquido é R$", salario_liquido, "\n");
 
