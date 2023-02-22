@@ -1,5 +1,6 @@
 Problema:
 
+Considerando 5 pessoas:
 Elabore um algoritmo para calcular o salario lìquido de uma pessoa.
 Solicite ao usuario que digite seu nome e o valor de seu salario bruto.
 Peça tambem, para o usuario digitar a quantidade de depedentes.
@@ -11,4 +12,4 @@ Caso a renda para cada membro da familia seja maior ou igual a R$500,00 o impost
 * salario bruto (a partir de 2826.66): 15
 Ao final, mostre na tela o valor do salario liquido.
 
-Aula 08 - comando de decisao alinhados
+Aula 09 - comando de repetição

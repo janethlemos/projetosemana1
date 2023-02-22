@@ -1,23 +1,28 @@
-const prompt = require('prompt-sync') ();
+const prompt = require('prompt-sync')();
 
-var nome = prompt('Digite seu nome:');  
-var salario_bruto = parseFloat(prompt('Digite seu salário bruto:'));
-var dependentes = parseInt(prompt ("Digite o numero de dependentes:"));
+for (var i = 1; i <= 5; i++) {
+  console.log("Pessoa", i);
 
-var renda_percapta = salario_bruto / (dependentes+1);
+  var nome = prompt('Digite seu nome:');
+  var salario_bruto = parseFloat(prompt('Digite seu salário bruto:'));
+  var dependentes = parseInt(prompt("Digite o numero de dependentes:"));
 
-if(renda_percapta >=500){
+  var renda_percapta = salario_bruto / (dependentes + 1);
 
-if (salario_bruto > 0 && salario_bruto <= 1903.98 ) {
-  var ir = salario_bruto * 0.05;
-} else if (salario_bruto <= 2826.65) {
-  var ir = salario_bruto * 0.075;
-} else{
-  var ir = salario_bruto * 0.15;
+  if (renda_percapta >= 500) {
+
+    if (salario_bruto > 0 && salario_bruto <= 1903.98) {
+      var ir = salario_bruto * 0.05;
+    } else if (salario_bruto <= 2826.65) {
+      var ir = salario_bruto * 0.075;
+    } else {
+      var ir = salario_bruto * 0.15;
+    }
+  } else {
+    var ir = 0;
+  }
+
+  var salario_liquido = salario_bruto - ir;
+  console.log("Sálário líquido é R$", salario_liquido, "\n");
+
 }
-} else {
-  var ir = 0;
-}
-
-var salario_liquido = salario_bruto - ir;
-console.log("Sálário líquido é R$", salario_liquido)
