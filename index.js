@@ -1,4 +1,8 @@
 const prompt = require('prompt-sync')();
+var salarios = [];
+var soma = 0;
+var media;
+var qtd_menores = 0;
 
 for (var i = 1; i <= 5; i++) {
   console.log("Pessoa", i);
@@ -26,8 +30,20 @@ for (var i = 1; i <= 5; i++) {
   } else {
     var ir = 0;
   }
-  console.log("O salario bruto da familia e:", salario_bruto + ganho);
+
   var salario_liquido = salario_bruto - ir;
   console.log("Sálário líquido é R$", salario_liquido, "\n");
 
+  salarios.push[salario_liquido];
+  soma = soma + salario_liquido;
 }
+media = soma / 5;
+
+for (var i = 0; i <= 4; i++) {
+  if (salarios[i] < media) {
+    qtd_menores++;
+  }
+}
+
+console.log("A media dos salarios liquidos e:", media);
+console.log("A quantidade de pessoas com salario liquido menor que a media e:", qtd_menores);
