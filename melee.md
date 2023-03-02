@@ -14,4 +14,9 @@ Ao final, mostre na tela o valor do salario liquido.
 
 Armazene os salarios liquidos em uma colecao indexada (array).
 Depois calcule a media dos salarios liquidos e quantas pessoas estao abaixo desse valor medio.
-Aula 11 - Coleçoes (arrays).
+
+Refatore seu código. Para isso, crie duas funções, a saber:
+*Função para calcular IR: Essa função deve recerber como parametros o salario bruto e a renda per capita e retornar ao final o valor de IR;
+* Função para calcular a quantidade de salarios liquidos menores que a media: esta função deve receber como parametros o array de salarios liquidos e medios dos salarios liquidos e retornar  a quantidade de salarios liquidos menores que a media;
+
+Aula 12 - Funcoes.

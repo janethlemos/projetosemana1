@@ -2,7 +2,7 @@ const prompt = require('prompt-sync')();
 var salarios = [];
 var soma = 0;
 var media;
-var qtd_menores = 0;
+var qtd_menores;
 
 for (var i = 1; i <= 5; i++) {
   console.log("Pessoa", i);
@@ -17,7 +17,22 @@ for (var i = 1; i <= 5; i++) {
 
   }
   var renda_percapta = salario_bruto / (dependentes + 1);
+  var ir = calcularIr(salario_bruto, renda_percapta);
 
+  var salario_liquido = salario_bruto - ir;
+  console.log("Sálário líquido é R$", salario_liquido, "\n");
+
+  salarios.push[salario_liquido];
+  soma = soma + salario_liquido;
+}
+media = soma / 5;
+
+qtd_menores = calcularQtdMenores(salarios, media);
+
+console.log("A media dos salarios liquidos e:", media);
+console.log("A quantidade de pessoas com salario liquido menor que a media e:", qtd_menores);
+
+function calcularIr(salario_bruto, renda_percapta) {
   if (renda_percapta >= 500) {
 
     if (salario_bruto > 0 && salario_bruto <= 1903.98) {
@@ -30,20 +45,15 @@ for (var i = 1; i <= 5; i++) {
   } else {
     var ir = 0;
   }
-
-  var salario_liquido = salario_bruto - ir;
-  console.log("Sálário líquido é R$", salario_liquido, "\n");
-
-  salarios.push[salario_liquido];
-  soma = soma + salario_liquido;
+  return ir;
 }
-media = soma / 5;
 
-for (var i = 0; i <= 4; i++) {
-  if (salarios[i] < media) {
-    qtd_menores++;
+function calcularQtdMenores(salarios, media) {
+  var qtd_menores = 0;
+  for (var i = 0; i <= 4; i++) {
+    if (salarios[i] < media) {
+      qtd_menores++;
+    }
+    return qtd_menores;
   }
 }
-
-console.log("A media dos salarios liquidos e:", media);
-console.log("A quantidade de pessoas com salario liquido menor que a media e:", qtd_menores);
